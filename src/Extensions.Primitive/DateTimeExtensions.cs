@@ -18,20 +18,20 @@ namespace Kritikos.Extensions.Primitive
 			=> Convert.ToInt64((date.ToUniversalTime().Ticks - EpochTicks) / TimeSpan.TicksPerSecond);
 
 		/// <summary>
-		/// Converts epoch time to a proper <see cref="DateTime"/> object.
-		/// </summary>
-		/// <param name="secondsSinceEpoch">The number of seconds that have ellapsed since Unix epoch.</param>
-		/// <returns><see cref="DateTime"/> representation of <paramref name="secondsSinceEpoch"/>.</returns>
-		public static DateTime FromEpochTime(this long secondsSinceEpoch)
-			=> new DateTime(EpochTicks + (secondsSinceEpoch * TimeSpan.TicksPerSecond));
-
-		/// <summary>
 		/// Converts a <see cref="DateTimeOffset"/> object to UNIX epoch format.
 		/// </summary>
 		/// <param name="date">The <see cref="DateTimeOffset"/> to convert.</param>
 		/// <returns>The number of seconds that have ellapsed since Unix epoch.</returns>
 		public static long ToEpochTime(this DateTimeOffset date)
 			=> Convert.ToInt64((date.ToUniversalTime().Ticks - EpochTicks) / TimeSpan.TicksPerSecond);
+
+		/// <summary>
+		/// Converts epoch time to a proper <see cref="DateTime"/> object.
+		/// </summary>
+		/// <param name="secondsSinceEpoch">The number of seconds that have ellapsed since Unix epoch.</param>
+		/// <returns><see cref="DateTime"/> representation of <paramref name="secondsSinceEpoch"/>.</returns>
+		public static DateTime FromEpochTime(this long secondsSinceEpoch)
+			=> new DateTime(EpochTicks + (secondsSinceEpoch * TimeSpan.TicksPerSecond));
 
 		/// <summary>
 		/// Converts epoch time to a proper <see cref="DateTimeOffset"/> object.
