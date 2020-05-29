@@ -20,6 +20,11 @@ namespace Kritikos.Extensions.Primitive
 		public static bool IsNullOrEmpty(this string value)
 			=> string.IsNullOrEmpty(value);
 
+		/// <summary>
+		/// Transforms a <see cref="string"/> to a new <see cref="SecureString"/> instance.
+		/// </summary>
+		/// <param name="value">The string that will be encrypted.</param>
+		/// <returns><see cref="SecureString"/> representation of <paramref name="value"/>.</returns>
 		public static SecureString AsSecureString(this string value)
 		{
 			if (value == null)
