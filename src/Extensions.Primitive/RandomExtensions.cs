@@ -35,7 +35,8 @@ namespace Kritikos.Extensions.Primitive
 				var buffer = new byte[8];
 				random.NextBytes(buffer);
 				ulongRand = (ulong)BitConverter.ToInt64(buffer, 0);
-			} while (ulongRand > ulong.MaxValue - (((ulong.MaxValue % uRange) + 1) % uRange));
+			}
+			while (ulongRand > ulong.MaxValue - (((ulong.MaxValue % uRange) + 1) % uRange));
 
 			return (long)(ulongRand % uRange) + min;
 		}
@@ -43,8 +44,8 @@ namespace Kritikos.Extensions.Primitive
 		/// <summary>
 		/// Returns a random long from 0 (inclusive) to max (exclusive).
 		/// </summary>
-		/// <param name="random">The given random instance</param>
-		/// <param name="max">The exclusive maximum bound.  Must be greater than 0</param>
+		/// <param name="random">The given random instance.</param>
+		/// <param name="max">The exclusive maximum bound.  Must be greater than 0.</param>
 		/// <returns>A new random <see cref="long"/> between 0 and <paramref name="max"/>.</returns>
 		public static long NextLong(this Random random, long max)
 			=> random.NextLong(0, max);
