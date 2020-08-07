@@ -1,9 +1,7 @@
 namespace Kritikos.Extensions.Primitive
 {
 	using System;
-	using System.Collections.Generic;
 	using System.Diagnostics.Contracts;
-	using System.Linq;
 
 	public static class DateTimeExtensions
 	{
