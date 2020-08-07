@@ -12,27 +12,6 @@ namespace Kritikos.Extensions.Primitive.Tests
 	{
 		private const string EmptyString = "";
 		private const string NullString = null;
-		private const string WhiteSpaceString = " \n";
-
-		[Fact]
-		public void IsNullOrWhiteSpaceTests()
-		{
-			Assert.True(NullString.IsNullOrWhiteSpace());
-			Assert.True(EmptyString.IsNullOrWhiteSpace());
-			Assert.True(WhiteSpaceString.IsNullOrWhiteSpace());
-			Assert.False(Guid.NewGuid().ToString().IsNullOrWhiteSpace());
-		}
-
-		[Fact]
-		public void IsNullOrEmptyWhiteSpaceTests()
-		{
-#pragma warning disable CS0618 // Type or member is obsolete
-			Assert.True(NullString.IsNullOrEmpty());
-			Assert.True(EmptyString.IsNullOrEmpty());
-			Assert.False(WhiteSpaceString.IsNullOrEmpty());
-			Assert.False(Guid.NewGuid().ToString().IsNullOrEmpty());
-#pragma warning restore CS0618 // Type or member is obsolete
-		}
 
 		[Fact]
 		public void SecureStringTests()
