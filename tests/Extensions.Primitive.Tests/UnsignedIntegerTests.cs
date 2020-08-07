@@ -17,7 +17,7 @@ namespace Kritikos.Extensions.Primitive.Tests
 		[Fact]
 		public void UIntTests()
 		{
-			var number = (uint)int.MaxValue + 1;
+			const uint number = (uint)int.MaxValue + 1;
 			var swappedEndianess = number.ReverseBytes();
 			var doublySwapped = swappedEndianess.ReverseBytes();
 
@@ -27,7 +27,7 @@ namespace Kritikos.Extensions.Primitive.Tests
 		[Fact]
 		public void ULongTests()
 		{
-			var number = (ulong)long.MaxValue + 1;
+			const ulong number = (ulong)long.MaxValue + 1;
 			var swappedEndianess = number.ReverseBytes();
 			var doublySwapped = swappedEndianess.ReverseBytes();
 
