@@ -12,7 +12,7 @@ namespace Kritikos.Extensions.Primitive
 		/// <summary>
 		/// Transliterations based on the ELOT 743 standard for romanization of Greek characters.
 		/// </summary>
-		public static readonly Dictionary<string, string[]> GreekTransliterations = new Dictionary<string, string[]>
+		internal static readonly Dictionary<string, string[]> GreekTransliterations = new Dictionary<string, string[]>
 		{
 			{ "gx", new[] { "γξ", "γΞ", "Γξ", "ΓΞ" } },
 			{ "a", new[] { "α", "ά", "Α", "Ά" } },
