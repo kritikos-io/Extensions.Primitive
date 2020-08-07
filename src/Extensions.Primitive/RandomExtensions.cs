@@ -7,7 +7,7 @@ namespace Kritikos.Extensions.Primitive
 		/// <summary>
 		/// Returns a random long from min (inclusive) to max (exclusive).
 		/// </summary>
-		/// <param name="random">The given random instance.</param>
+		/// <param name="random">The given <see cref="Random"/> instance.</param>
 		/// <param name="min">The inclusive minimum bound.</param>
 		/// <param name="max">The exclusive maximum bound.  Must be greater than min..</param>
 		/// <returns>A new random <see cref="long"/> between <paramref name="min"/> and <paramref name="max"/>.</returns>
@@ -44,7 +44,7 @@ namespace Kritikos.Extensions.Primitive
 		/// <summary>
 		/// Returns a random long from 0 (inclusive) to max (exclusive).
 		/// </summary>
-		/// <param name="random">The given random instance.</param>
+		/// <param name="random">The given <see cref="Random"/> instance.</param>
 		/// <param name="max">The exclusive maximum bound.  Must be greater than 0.</param>
 		/// <returns>A new random <see cref="long"/> between 0 and <paramref name="max"/>.</returns>
 		public static long NextLong(this Random random, long max)
@@ -53,7 +53,7 @@ namespace Kritikos.Extensions.Primitive
 		/// <summary>
 		/// Returns a random long over all possible values of long (except long.MaxValue, similar to random.Next()).
 		/// </summary>
-		/// <param name="random">The given random instance.</param>
+		/// <param name="random">The given <see cref="Random"/> instance.</param>
 		/// <returns>A new random <see cref="long"/> between <see cref="long.MinValue"/> and <see cref="long.MaxValue"/>.</returns>
 		public static long NextLong(this Random random)
 			=> random.NextLong(long.MinValue, long.MaxValue);
